@@ -23,6 +23,7 @@
     
     section#login {
         width: 80%;
+        height: 340px;
     }
     section#login > div#imagem {
         float: left; /*flutua para esquerda*/
@@ -44,6 +45,7 @@
     
     section#login {
         width: 950px;
+        height: 440px;
     }
 
     section#login > div#imagem {

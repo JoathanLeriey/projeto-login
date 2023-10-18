@@ -29,7 +29,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /*tudo que ta fora da borda vai fica escondido*/
 
     background-color: white;
@@ -40,6 +39,7 @@ section#login {
 
     transition: width .3s, height 0.3s; /*trasição fluida*/
     transition-timing-function: ease; /*para da uma suavidade na animação*/
+    transform: translate(-50%, -50%);
 }
 
 section#login > div#imagem {
@@ -67,14 +67,38 @@ div#formulario > p {
 form > div.campo {
     display: block;
     background-color: #5f2c82;
+    border: 3px solid #5f2c82;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > i {
+    color: whitesmoke;
+    
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #92ece8;
+    font-size: 1em;
+    width: calc(100% - 45px); /*basicamente é um calculo*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-13px); /*quando tive uma animação vc coloca ele por ultimo*/
+}
+
+div.campo > input:focus-within { /*basicamente esse comando quando eu tive digitando ele vai aconte algo*/
+    background-color: white;
 }
 
 form > input[type=submit] { /*esse cochete é para pega so esse tipo que e o de envia*/
@@ -83,6 +107,7 @@ form > input[type=submit] { /*esse cochete é para pega so esse tipo que e o de 
 
     width: 100%;
     height: 40px;
+    margin-top: 10px;
 
     background-color: #49a09d;
     color: white;
